@@ -6,7 +6,7 @@ Work in progress ❗
 
 https://nicolasneeser.ch/
 
-## Tech stack
+## Tech stack ⚙️
 
 - TypeScript
 - React
