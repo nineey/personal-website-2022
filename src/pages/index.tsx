@@ -90,7 +90,7 @@ const StyledIcon = styled.p`
 	@media ${device.tablet} {
 		font-size: 70px;
 		margin-top: 0em;
-		margin-bottom: -16px;
+		margin-bottom: -17px;
 	}
 `;
 
