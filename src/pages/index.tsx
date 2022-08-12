@@ -13,12 +13,16 @@ const Home: NextPage = () => {
 		<>
 			<Head>
 				<title>Nicolas Neeser</title>
+				<meta
+					name='description'
+					content='Digital Native who loves technology.'
+				/>
 			</Head>
 
 			<FlexContainer>
 				<StyledText>
 					{content.intro_hey[locale]} <br />
-					{content.intro[locale]}
+					{content.intro[locale]} 🚴🏼
 				</StyledText>
 			</FlexContainer>
 			<a href='mailto:hey@nicolasneeser.ch' target='_blank' rel='noreferrer'>
@@ -31,11 +35,38 @@ const Home: NextPage = () => {
 				rel='noreferrer'>
 				<StyledPara>&gt; LinkedIn</StyledPara>
 			</a>
+
+			<ConstructionContainer>
+				<StyledIcon>👨🏻‍💻</StyledIcon>
+				<hr />
+
+				<StyledLongText>{content.underConstruction[locale]}</StyledLongText>
+				<br />
+				<StyledList>🎭 TypeScript</StyledList>
+				<br />
+				<StyledList>⚛️ React</StyledList>
+				<br />
+				<StyledList>⚙️ Next.js ({content.i18n[locale]})</StyledList>
+				<br />
+				<StyledList>🎨 styled-components</StyledList>
+				<br />
+				<StyledList>🚀 {content.vercel[locale]} </StyledList>
+			</ConstructionContainer>
 		</>
 	);
 };
 
 export default Home;
+
+const ConstructionContainer = styled.div`
+	margin-top: 5em;
+`;
+
+const StyledList = styled.span`
+	line-height: 1.3;
+	font-weight: 400;
+	font-size: 1.2em;
+`;
 
 const StyledText = styled.h1`
 	font-size: 40px;
@@ -47,6 +78,26 @@ const StyledText = styled.h1`
 		font-size: 70px;
 		margin-top: 0em;
 	}
+`;
+
+const StyledIcon = styled.p`
+	font-size: 40px;
+	font-weight: 600;
+	line-height: 1.2;
+	margin-top: 2em;
+	margin-bottom: -13px;
+
+	@media ${device.tablet} {
+		font-size: 70px;
+		margin-top: 0em;
+		margin-bottom: -16px;
+	}
+`;
+
+const StyledLongText = styled.p`
+	line-height: 1.3;
+	font-weight: 400;
+	font-size: 1.2em;
 `;
 
 const StyledPara = styled.a`
